@@ -66,7 +66,7 @@ class App extends Component {
         userName={this.state.currentUser.userName}
         memberSince={this.state.currentUser.memberSince} />
     )
-    const DebitComponent = () => (<Debit amount={this.debits}/>
+    const DebitsPage = () => (<Debit amount={this.debits}/>
     );
 
     return (
@@ -74,7 +74,7 @@ class App extends Component {
         <div>
           <Route exact path="/" render={HomeComponent} />
           <Route exact path="/userProfile" render={UserProfileComponent} />
-          <Route exact path="/Debit" render={DebitComponent}/>
+          <Route exact path="/debits" render={DebitsPage}/>
         </div>
       </Router>
     );

@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 
 const DebitList = (debit) => {
         this.props.debits.map((debit) => {
-        return <DebitList debit={DebitComponent}/>
+        return <DebitsPaget debit={DebitsPage}/>
     })
 }
 
-export default DebitList;
+export default DebitsPage;
