@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-// import Debit from './Debit';
-// import axios from 'axios';
+import React, { Component } from 'react';
+import DebitsList from './DebitsList';
 
-const DebitList = (debit) => {
-        this.props.debits.map((debit) => {
-        return <DebitsPaget debit={DebitsPage}/>
-    })
+
+const DebitsPage = (props) => {
+    return (
+        <div>
+            <h1> Debits Page </h1>
+            <DebitsList debits={props.debits} />
+            </div>
+    )
 }
-
 export default DebitsPage;

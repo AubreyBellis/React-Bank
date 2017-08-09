@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import Debit from './components/Debit';
+import DebitsPage from './components/DebitsPage';
 
 import axios from 'axios';
 
@@ -66,15 +67,15 @@ class App extends Component {
         userName={this.state.currentUser.userName}
         memberSince={this.state.currentUser.memberSince} />
     )
-    const DebitsPage = () => (<Debit amount={this.debits}/>
-    );
+    const DebitsPageComponent = () =>
+      (<DebitsPage debits={this.state.debits}/>)
 
     return (
       <Router>
         <div>
           <Route exact path="/" render={HomeComponent} />
           <Route exact path="/userProfile" render={UserProfileComponent} />
-          <Route exact path="/debits" render={DebitsPage}/>
+          <Route exact path="/debits" render={DebitsPageComponent}/>
         </div>
       </Router>
     );

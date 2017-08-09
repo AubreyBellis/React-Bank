@@ -2,9 +2,14 @@ import React, {Component} from 'react';
 // import DebitList from './components/DebitList';
 
 const Debit = (props) => {
-    <Debit description= {this.props.description}
-            amount={this.props.debits}
-            date= {this.props.date}/>
+    return (
+        <div>
+            <span>Description: {props.description}
+                Amount: {props.amount}
+                Date: {props.date}
+                </span>
+                    </div>
+    )
 
 }
 
